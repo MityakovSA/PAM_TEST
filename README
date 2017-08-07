@@ -1,0 +1,10 @@
+To compile this PAM module you need to use this commands in your terminal:
+gcc -fPIC -c pam_test.c
+gcc -shared -o pam_test.so pam_test.o -lpam
+
+To plug module in the system you need to:
+1) put pam_test.so into /lib/security/ (for Astra Linux: /lib/x86_64-linux-gnu/security/);
+2) open /etc/pam.d/login and type following line before standart UNIX authentication option:
+auth    sufficient    pam_test.so
+
+If you want to use autologin module type pam_test_auto.* everywhere instead of pam_test.* .
