@@ -12,7 +12,7 @@
 #include <security/pam_modules.h>
 #include <security/pam_appl.h>
 
-const char *pCredentials = "sergey:12345";   /* your auth data (need to set up) */
+const char *pCredentials = "login:12345";   /* your auth data "login:password" (need to set up) */
 
 
 PAM_EXTERN int pam_sm_authenticate(pam_handle_t *pamh, int flags, int argc, const char **argv)
