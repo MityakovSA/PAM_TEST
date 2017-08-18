@@ -1,6 +1,6 @@
 To compile this PAM module you need to use this commands in your terminal:
 gcc -fPIC -c pam_test.c
-gcc -shared -o pam_test.so pam_test.o -lpam
+gcc -shared -o pam_test.so pam_test.o -lpam -lcrypt
 
 To plug module in the system you need to:
 1) put pam_test.so into /lib/security/ (for Astra Linux: /lib/x86_64-linux-gnu/security/);
